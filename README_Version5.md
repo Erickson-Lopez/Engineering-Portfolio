@@ -1,6 +1,6 @@
-# Hey, I’m [Your Name] 👋
+# Hey, I’m Erickson 👋
 
-Welcome to my portfolio! I’m an engineering student who’s all about hands-on building, simple solutions, and making stuff that’s actually helpful. Scroll down to see my work and what I’m currently building.
+Welcome to my portfolio! I’m a second year Mechanical engineering student who’s all about hands-on building, simple solutions, and making stuff that’s actually helpful. Scroll down to see my work and what I’m currently building.
 
 ---
 
