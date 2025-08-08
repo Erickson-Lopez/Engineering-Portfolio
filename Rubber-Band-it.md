@@ -1,124 +1,139 @@
+# 🛡️ Rubber Band-it: Dual-ESC Arduino Turret Tank with Rubber Band Launcher
+
+A fully custom Arduino-based RC tank for modular embedded systems, applied engineering, and mechanical design. Features independent track drive, a pan/tilt turret, and a sprocket-based rubber band launcher. Designed for hands-on learning, demonstration, and as a showcase for recruiters seeking practical, systems-level engineering.
 
 ---
 
-### 🛡️ Rubber Band-it: Arduino Dual-ESC Turret Tank
+## 1. Project Overview
 
-_A custom RC tank platform for learning and demonstrating embedded systems, real-time signal processing, and applied engineering. Designed for hobbyists, students, and as a showcase for recruiters. Combines Arduino control, a graphical OLED HUD, and mechanical FEA-validated 3D-printed parts._
-
-#### Key Features
-
-- Dual PWM ESC drivetrain for smooth tank and pivot control
-- Interrupt-driven RC signal decoding (6 channels)
-- Turret pan/tilt with exponential smoothing (ODE-based)
-- Animated OLED HUD with crosshair, channel status, and startup Mario theme
-- Live battery voltage via EE voltage divider
-- All critical hardware designed in CAD and validated with FEA (ANSYS)
-- Downloadable STL files + interactive 3D and FEA result viewers
+- **Platform:** Arduino Nano, custom CAD chassis, dual-ESC N20 motor drivetrain
+- **Control:** 6-channel Spektrum RC, interrupt-driven signal decoding
+- **Features:** Turret pan/tilt, animated OLED HUD, battery voltage sensing, and semi/full-auto launcher
+- **Purpose:** Modular, extensible, and robust — engineered to impress both hobbyists and seasoned technical reviewers
 
 ---
 
-#### 📚 Project Overview
+## 2. Mechanical Structure & Assembly
 
-Rubber Band-it is a fully custom, Arduino-powered RC tank designed to maximize modularity, smooth motion, and hands-on learning in embedded systems and mechanical design. Each hardware, software, and math iteration is logged—highlighting engineering insight and real-world troubleshooting.
+### Frame & Chassis
+- 3D-printed, FEA-validated chassis (PLA/PETG)
+- All critical load-bearing mounts verified in ANSYS (factor of safety ≥ 3)
+- Downloadable STL files and simulation result viewers included
 
----
+### Turret & Launcher
+- Pan: Continuous rotation servo
+- Tilt: Standard 180° servo
+- Launcher: Sprocket-driven, continuous servo for rapid fire
 
-#### 🧩 Engineering Highlights
+### Track System
+- Dual N20 motors, independently ESC-controlled for pivot/turn
+- 4 cm sprocket diameter for each drive wheel
 
-- **Math & Physics:**  
-  - Exponential smoothing (ODE) for actuator filtering
-  - Parametric mapping and vector fields for HUD visualization
-  - EE voltage divider for live battery readout
-  - Physics-based speed estimation (RPM, diameter)
-- **FEA Validated:**  
-  - 3D-printed load-bearing mount analyzed in ANSYS (static load, safety factor ≥ 3, full animated and static results)
-  - PLA, PETG, and future-proofing for material upgrades
-
----
-
-#### 🖼️ Visual Gallery
-
-<details>
-<summary>Expand for key images and simulation GIFs</summary>
-
-- **Tank Chassis Preview:**  
-  ![Tank Chassis Preview](./Rubber-Band-it/stl/tank_chassis_v1.5_preview.png)
-
-- **FEA: Static Structural (von-Mises stress):**  
-  ![Static Structural GIF](./Rubber-Band-it/feasim/rocker_vonmises_static_structural.gif)
-
-- **FEA: Total Deformation Animation:**  
-  ![Total Deformation GIF](./Rubber-Band-it/feasim/rocker_total_deformation.gif)
-
-</details>
+### Assembly & Fasteners
+- **Bill of Materials:** (expandable — see repo for details)
+    - M3 screws, brass heat inserts for plastic, wiring harnesses
+- **Wiring:** Color-coded, crimped connectors; LiPo with buck converter for regulated 5V
+- **Documentation:** Step-by-step assembly, wiring, and part sourcing (to be expanded)
 
 ---
 
-#### 📈 FEA Simulation: V-Arm Rocker Mount (ANSYS 2025R2)
+## 3. Electronics & Wiring
 
-- **Simulation Type:** Static Structural (ANSYS Student)
-- **Objective:** Validate 3D-printed PLA rocker-arm mount under vertical tank loading
-- **Results:**  
-  - _Deformation:_ ≤ 0.2 mm (localized)
-  - _von-Mises Stress:_ ~10–20 MPa (well below PLA yield of 60 MPa)
-  - _Factor of Safety:_ ~3.0+
-- **Engineering Takeaways:**  
-  - Structurally sound under 2 lb (~8.9 N) tank
-  - Minimal deformation, safe for tracked vehicle use
-- **Downloads:**  
-  - [ANSYS Project (.wbpz)](./Rubber-Band-it/feasim/rocker_mount_sim.wbpz)
-  - [Deformed STL](./Rubber-Band-it/feasim/rocker_deformed.stl) ([View interactively](https://www.viewstl.com/?model=https://raw.githubusercontent.com/Erickson-Lopez/your-repo/main/Rubber-Band-it/feasim/rocker_deformed.stl))
-  - [Simulation video (MP4)](./Rubber-Band-it/feasim/rocker_deformation.mp4)
+- **Control Board:** Arduino Nano
+- **Motor Driver:** L298N ZX-040 (dual ESC)
+- **Power:** 7.4V LiPo → buck converter (5V logic/electronics)
+- **HUD:** OLED (U8glib), live telemetry and crosshair overlay
+- **RC Interface:** 6-channel Spektrum receiver, interrupt-driven PWM decoding
 
 ---
 
-#### 🧮 Math, Code & Engineering Principles
+## 4. Pre-Design Science & Calculations
 
-- **Smoothing:**  
-  ```cpp
-  currentTilt = currentTilt * (1 - alpha) + targetTilt * alpha; // α = 0.2
-  ```
-- **Throttle/Yaw Mapping:**  
-  ```cpp
-  int escSignal = map(value, -127, 127, 1000, 2000);
-  ```
-- **Voltage Divider:**  
-  ```cpp
-  float vBat = vRaw * ((10.0 + 4.7) / 4.7);
-  ```
-- **Vector Math (HUD):**  
-  $$
-  \vec{F}(t) = \langle \text{throttle}(t), \text{yaw}(t) \rangle
-  $$
-- **Physics:**  
-  $$
-  \text{Speed} = \text{RPM} \cdot \frac{D\pi}{60}
-  $$
+### A. Motor-to-Track Speed Calculation
+
+Given:  
+- Sprocket diameter $D = 4\ \text{cm} = 0.04\ \text{m}$
+- Motor speed $\text{RPM} = 1000$
+
+**Step 1:** Circumference  
+$C = \pi \cdot D = \pi \cdot 0.04 \approx 0.1257\ \text{m}$
+
+**Step 2:** Revolutions per Second  
+$\text{RPS} = \frac{1000}{60} \approx 16.67$
+
+**Step 3:** Linear Speed  
+$v = \text{RPS} \cdot C \approx 16.67 \cdot 0.1257 \approx 2.10\ \text{m/s}$
+
+**Result:**  
+**Speed ≈ 2.10 m/s (~7.56 km/h, ~4.7 mph) at no load**
 
 ---
 
-#### 📁 Downloads
+### B. Torque Output
 
-- [Latest Firmware](./Rubber-Band-it/firmware/Rubber-Band-it_v1.5.ino)
-- [Tank Chassis STL](./Rubber-Band-it/stl/tank_chassis_v1.5.stl) ([Preview](./Rubber-Band-it/stl/tank_chassis_v1.5_preview.png)) ([View STL](https://www.viewstl.com/?model=https://raw.githubusercontent.com/Erickson-Lopez/your-repo/main/Rubber-Band-it/stl/tank_chassis_v1.5.stl))
-- [Rocker Deformed STL](./Rubber-Band-it/feasim/rocker_deformed.stl) ([View STL](https://www.viewstl.com/?model=https://raw.githubusercontent.com/Erickson-Lopez/your-repo/main/Rubber-Band-it/feasim/rocker_deformed.stl))
-
----
-
-#### 🔗 References
-
-- [u8glib OLED Library](https://github.com/olikraus/u8glib)
-- [PinChangeInterrupt Arduino Playground](https://playground.arduino.cc/Main/PinChangeInterrupt/)
-- [Servo.h Docs](https://www.arduino.cc/en/Reference/Servo)
-- [Mario Theme Arduino](https://www.instructables.com/Arduino-Mario-Bros-Theme-Song/)
+$\tau_{\text{output}} = \tau_{\text{motor}} \cdot \text{Gear Ratio}$  
+- Gear ratio (1:4) selected for balance of torque and speed
 
 ---
 
-#### Build Log
+### C. Voltage Divider for Battery Sensing
 
-- **2025-08-07** — Integrated full FEA documentation and simulation GIFs, improved portfolio organization.
-- **2025-08-01** — Added static and deformation simulations for rocker mount (PLA), confirmed safety factor ≥ 3.
-- **2025-07-25** — Firmware v1.5 released: HUD upgrade, crosshair overlays, voltage readout, improved ESC logic.
-- **2025-07-01** — OLED animation, Mario startup sequence, live channel splash, parametric vector math for HUD.
-- **2025-06-10** — Replaced L298N with dual PWM ESCs, improved throttle mapping and failsafes.
-- **2025-05-19** — Initial design: Arduino Nano, L298N, basic servo/turret logic.
+$V_{\text{out}} = V_{\text{in}} \cdot \frac{R_2}{R_1 + R_2}$
+
+Example: $R_1 = 15k\Omega$, $R_2 = 10k\Omega$, $V_{\text{in}} = 12.6V$  
+$\rightarrow V_{\text{out}} \approx 4.44V$
+
+---
+
+### D. Power Budgeting
+
+$P = V \cdot I$  
+- Motors: ~2A peak each  
+- Servos: ~0.5–0.8A each  
+- Arduino + OLED: ~80mA  
+- Buck converter rated above system max to avoid brownouts
+
+---
+
+### E. Track Steering Kinematics
+
+$\omega_{\text{turn}} = \frac{v_R - v_L}{W}$  
+- $v_R, v_L$: right/left track speeds  
+- $W$: track width
+
+---
+
+### F. PWM Control Mapping
+
+- Neutral: 1500 µs  
+- Forward: 1500–2000 µs  
+- Reverse: 1000–1500 µs
+
+---
+
+## 5. Simulation & Validation
+
+### FEA: V-Arm Rocker Mount (ANSYS 2025R2)
+
+- **Simulation:** Static structural (PLA, 2 lb tank load)
+- **Results:** Max deformation ≤ 0.2 mm; von-Mises stress ~10–20 MPa (well below PLA yield 60 MPa)
+- **Factor of Safety:** ~3.0+
+- **Downloadables:**  
+    - [ANSYS Project](./Rubber-Band-it/feasim/rocker_mount_sim.wbpz)  
+    - [Deformed STL](./Rubber-Band-it/feasim/rocker_deformed.stl)  
+    - [Simulation MP4](./Rubber-Band-it/feasim/rocker_deformation.mp4)  
+    - [Interactive Viewer](https://www.viewstl.com/?model=https://raw.githubusercontent.com/Erickson-Lopez/Engineering-Portfolio/main/Rubber-Band-it/feasim/rocker_deformed.stl)
+
+---
+
+## 6. Embedded Code & Math Snippets
+
+```cpp
+// Exponential smoothing for actuator
+currentTilt = currentTilt * (1 - alpha) + targetTilt * alpha; // α = 0.2
+
+// Throttle/Yaw mapping
+int escSignal = map(value, -127, 127, 1000, 2000);
+
+// Battery voltage divider
+float vBat = vRaw * ((10.0 + 4.7) / 4.7);
