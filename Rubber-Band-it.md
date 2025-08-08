@@ -137,6 +137,7 @@ int escSignal = map(value, -127, 127, 1000, 2000);
 
 // Battery voltage divider
 float vBat = vRaw * ((10.0 + 4.7) / 4.7);
+```
 
 ## 7. Visual Gallery
 
