@@ -137,3 +137,59 @@ int escSignal = map(value, -127, 127, 1000, 2000);
 
 // Battery voltage divider
 float vBat = vRaw * ((10.0 + 4.7) / 4.7);
+
+## 7. Visual Gallery
+
+<details>
+<summary>Expand for images & simulation GIFs</summary>
+
+- **Tank Chassis Preview:**  
+  ![Chassis Preview](./Rubber-Band-it/stl/tank_chassis_v1.5_preview.png)
+- **FEA: Static Stress:**  
+  ![Static Structural GIF](./Rubber-Band-it/feasim/rocker_vonmises_static_structural.gif)
+- **FEA: Deformation:**  
+  ![Deformation GIF](./Rubber-Band-it/feasim/rocker_total_deformation.gif)
+
+</details>
+
+---
+
+## 8. Downloads & Resources
+
+- [Latest Firmware](./Rubber-Band-it/firmware/Rubber-Band-it_v1.5.ino)
+- [Tank Chassis STL](./Rubber-Band-it/stl/tank_chassis_v1.5.stl)
+- [Rocker Deformed STL](./Rubber-Band-it/feasim/rocker_deformed.stl)
+
+---
+
+## 9. Project Timeline
+
+- 2025-08-07: FEA docs, simulation GIFs, portfolio reorg
+- 2025-08-01: Static/deformation sims, safety factor ≥ 3
+- 2025-07-25: v1.5 firmware, HUD, crosshair overlays, voltage readout
+- 2025-07-01: OLED animation, Mario startup, vector math HUD
+- 2025-06-10: Dual ESCs, improved throttle, failsafes
+- 2025-05-19: Initial Arduino/L298N/servo logic
+
+---
+
+## 10. Engineering Skills Demonstrated
+
+- Embedded systems, real-time code
+- PWM motor & servo control
+- Voltage sensing, power distribution
+- CAD, FEA, and mechanical validation
+- Kinematics, torque, and speed calculations
+
+---
+
+## References
+
+- [u8glib OLED Library](https://github.com/olikraus/u8glib)
+- [PinChangeInterrupt Playground](https://playground.arduino.cc/Main/PinChangeInterrupt/)
+- [Servo.h Docs](https://www.arduino.cc/en/Reference/Servo)
+- [Mario Theme Arduino](https://www.instructables.com/Arduino-Mario-Bros-Theme-Song/)
+
+---
+
+*Assembly, wiring diagrams, and BOM details will be expanded in future commits. See repo for STL, code, and simulation downloads.*
