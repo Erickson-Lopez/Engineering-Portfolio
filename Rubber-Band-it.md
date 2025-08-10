@@ -1,169 +1,100 @@
 # 🛡️ Rubber Band-it: Dual-ESC Arduino Turret Tank with Rubber Band Launcher
 
-A fully custom Arduino-based RC tank for modular embedded systems, applied engineering, and mechanical design. Features independent track drive, a pan/tilt turret, and a sprocket-based rubber band launcher. Designed for hands-on learning, demonstration, and as a showcase for recruiters seeking practical, systems-level engineering.
+A custom Arduino-based RC tank designed for modular embedded systems learning and applied engineering. Features independent track drive, pan/tilt turret, and a sprocket-based rubber band launcher.
 
 ---
 
-## 1. Project Overview
+## 1. Project Introduction
 
-- **Platform:** Arduino Nano, custom CAD chassis, dual-ESC N20 motor drivetrain
-- **Control:** 6-channel Spektrum RC, interrupt-driven signal decoding
-- **Features:** Turret pan/tilt, animated OLED HUD, battery voltage sensing, and semi/full-auto launcher
-- **Purpose:** Modular, extensible, and robust — engineered to impress both hobbyists and seasoned technical reviewers
+Brief overview of project goals, what the tank does, and why it was built. (To be expanded with more detail later.)
 
 ---
 
-## 2. Mechanical Structure & Assembly
+## 2. Mechanical Systems & Design
 
-### Frame & Chassis
-- 3D-printed, FEA-validated chassis (PLA/PETG)
-- All critical load-bearing mounts verified in ANSYS (factor of safety ≥ 3)
-- Downloadable STL files and simulation result viewers included
+- **Chassis & Frame:**  
+  3D-printed PLA/PETG chassis, FEA-validated for strength.  
+  All major load-bearing mounts analyzed in ANSYS (factor of safety ≥ 3).
 
-### Turret & Launcher
-- Pan: Continuous rotation servo
-- Tilt: Standard 180° servo
-- Launcher: Sprocket-driven, continuous servo for rapid fire
+- **Turret & Launcher:**  
+  Pan/tilt with standard and continuous servos, sprocket-driven launcher for rapid fire.
 
-### Track System
-- Dual N20 motors, independently ESC-controlled for pivot/turn
-- 4 cm sprocket diameter for each drive wheel
+- **Track Drive:**  
+  Dual N20 motors (ESC-controlled), 4cm sprocket drive wheels for pivot and turn capability.
 
-### Assembly & Fasteners
-- **Bill of Materials:** (expandable — see repo for details)
-    - M3 screws, brass heat inserts for plastic, wiring harnesses
-- **Wiring:** Color-coded, crimped connectors; LiPo with buck converter for regulated 5V
-- **Documentation:** Step-by-step assembly, wiring, and part sourcing (to be expanded)
+- **FEA & Validation:**  
+  Static structural simulation (ANSYS 2025R2) on critical parts.  
+  Max deformation ≤ 0.2mm; von-Mises stress well below PLA yield.  
+  [Downloadable simulation files and viewers available.]
 
----
+- **Manufacturing & Design Choices:**  
+  Designed around FDM 3D printing for easy replication and modification. Fasteners chosen for plastic (M3 screws, heat inserts).  
+  Design driven by balance between ease of printing, strength, and modularity.
 
-## 3. Electronics & Wiring
-
-- **Control Board:** Arduino Nano
-- **Motor Driver:** L298N ZX-040 (dual ESC)
-- **Power:** 7.4V LiPo → buck converter (5V logic/electronics)
-- **HUD:** OLED (U8glib), live telemetry and crosshair overlay
-- **RC Interface:** 6-channel Spektrum receiver, interrupt-driven PWM decoding
+- **Speed Calculation (at 1000 RPM):**  
+  - Sprocket diameter: 4 cm  
+  - Circumference: ≈ 0.126 m  
+  - RPS: ≈ 16.67  
+  - Linear speed: ≈ 2.10 m/s (~7.56 km/h) at no load
 
 ---
 
-## 4. Pre-Design Science & Calculations
+## 3. Electronics Overview & Wiring
 
-### A. Motor-to-Track Speed Calculation
+- **Core Components:**  
+  - Arduino Nano control board  
+  - L298N ZX-040 (dual ESC) motor driver  
+  - 6-channel Spektrum RC receiver for wireless control  
+  - 7.4V LiPo battery + buck converter for 5V rails  
+  - OLED display for live telemetry and HUD
 
-Given:  
-- Sprocket diameter $D = 4\ \text{cm} = 0.04\ \text{m}$
-- Motor speed $\text{RPM} = 1000$
+- **Function Overview:**  
+  - RC inputs decoded by Arduino (interrupts)  
+  - Motors/servos driven by PWM  
+  - Battery voltage monitored via divider  
+  - HUD shows status and crosshair
 
-**Step 1:** Circumference  
-$C = \pi \cdot D = \pi \cdot 0.04 \approx 0.1257\ \text{m}$
-
-**Step 2:** Revolutions per Second  
-$\text{RPS} = \frac{1000}{60} \approx 16.67$
-
-**Step 3:** Linear Speed  
-$v = \text{RPS} \cdot C \approx 16.67 \cdot 0.1257 \approx 2.10\ \text{m/s}$
-
-**Result:**  
-**Speed ≈ 2.10 m/s (~7.56 km/h, ~4.7 mph) at no load**
+- **Wiring Diagram:**  
+  *(Placeholder for wiring PDF/diagram to be added here)*
 
 ---
 
-### B. Torque Output
+## 4. Firmware & Code Structure
 
-$\tau_{\text{output}} = \tau_{\text{motor}} \cdot \text{Gear Ratio}$  
-- Gear ratio (1:4) selected for balance of torque and speed
+- **Main Functions:**  
+  - Interrupt-based RC signal reading  
+  - ESC and servo PWM output  
+  - OLED HUD and data display  
+  - Battery voltage monitoring  
+  - Exponential smoothing for actuator response
 
----
+- **Key Code Snippets:**  
+  - Exponential smoothing for tilt  
+  - Mapping throttle/yaw to ESC PWM  
+  - Battery voltage calculation
 
-### C. Voltage Divider for Battery Sensing
-
-$V_{\text{out}} = V_{\text{in}} \cdot \frac{R_2}{R_1 + R_2}$
-
-Example: $R_1 = 15k\Omega$, $R_2 = 10k\Omega$, $V_{\text{in}} = 12.6V$  
-$\rightarrow V_{\text{out}} \approx 4.44V$
-
----
-
-### D. Power Budgeting
-
-$P = V \cdot I$  
-- Motors: ~2A peak each  
-- Servos: ~0.5–0.8A each  
-- Arduino + OLED: ~80mA  
-- Buck converter rated above system max to avoid brownouts
+- **Description:**  
+  Each code chunk (RC decode, drive, display, telemetry) to be described here in more detail. (Will be filled out further.)
 
 ---
 
-### E. Track Steering Kinematics
+## 5. Build Issues & Troubleshooting
 
-$\omega_{\text{turn}} = \frac{v_R - v_L}{W}$  
-- $v_R, v_L$: right/left track speeds  
-- $W$: track width
-
----
-
-### F. PWM Control Mapping
-
-- Neutral: 1500 µs  
-- Forward: 1500–2000 µs  
-- Reverse: 1000–1500 µs
+- Tolerance problems with printed parts (fit/finish)
+- Code bugs (PWM decoding, servo jitter, signal loss)
+- L298N driver issues (brownouts, current limits)
+- Iterative fixes and lessons learned
 
 ---
 
-## 5. Simulation & Validation
+## 6. Wanna Build It Yourself?
 
-### FEA: V-Arm Rocker Mount (ANSYS 2025R2)
-
-- **Simulation:** Static structural (PLA, 2 lb tank load)
-- **Results:** Max deformation ≤ 0.2 mm; von-Mises stress ~10–20 MPa (well below PLA yield 60 MPa)
-- **Factor of Safety:** ~3.0+
-- **Downloadables:**  
-    - [ANSYS Project](./Rubber-Band-it/feasim/rocker_mount_sim.wbpz)  
-    - [Deformed STL](./Rubber-Band-it/feasim/rocker_deformed.stl)  
-    - [Simulation MP4](./Rubber-Band-it/feasim/rocker_deformation.mp4)  
-    - [Interactive Viewer](https://www.viewstl.com/?model=https://raw.githubusercontent.com/Erickson-Lopez/Engineering-Portfolio/main/Rubber-Band-it/feasim/rocker_deformed.stl)
+**Coming Soon:**  
+A full step-by-step build PDF (including STL files, assembly, and wiring) will be provided here for easy replication.
 
 ---
 
-## 6. Embedded Code & Math Snippets
-
-```cpp
-// Exponential smoothing for actuator
-currentTilt = currentTilt * (1 - alpha) + targetTilt * alpha; // α = 0.2
-
-// Throttle/Yaw mapping
-int escSignal = map(value, -127, 127, 1000, 2000);
-
-// Battery voltage divider
-float vBat = vRaw * ((10.0 + 4.7) / 4.7);
-```
-
-## 7. Visual Gallery
-
-<details>
-<summary>Expand for images & simulation GIFs</summary>
-
-- **Tank Chassis Preview:**  
-  ![Chassis Preview](./Rubber-Band-it/stl/tank_chassis_v1.5_preview.png)
-- **FEA: Static Stress:**  
-  ![Static Structural GIF](./Rubber-Band-it/feasim/rocker_vonmises_static_structural.gif)
-- **FEA: Deformation:**  
-  ![Deformation GIF](./Rubber-Band-it/feasim/rocker_total_deformation.gif)
-
-</details>
-
----
-
-## 8. Downloads & Resources
-
-- [Latest Firmware](./Rubber-Band-it/firmware/Rubber-Band-it_v1.5.ino)
-- [Tank Chassis STL](./Rubber-Band-it/stl/tank_chassis_v1.5.stl)
-- [Rocker Deformed STL](./Rubber-Band-it/feasim/rocker_deformed.stl)
-
----
-
-## 9. Project Timeline
+## 7. Project Timeline
 
 - 2025-08-07: FEA docs, simulation GIFs, portfolio reorg
 - 2025-08-01: Static/deformation sims, safety factor ≥ 3
@@ -174,13 +105,12 @@ float vBat = vRaw * ((10.0 + 4.7) / 4.7);
 
 ---
 
-## 10. Engineering Skills Demonstrated
+## 8. Next Steps & Future Improvements
 
-- Embedded systems, real-time code
-- PWM motor & servo control
-- Voltage sensing, power distribution
-- CAD, FEA, and mechanical validation
-- Kinematics, torque, and speed calculations
+- Expand assembly instructions and troubleshooting guide
+- Add full build video and wiring diagrams
+- Firmware improvements (safety features, new HUD elements)
+- Hardware tweaks for reliability and printability
 
 ---
 
@@ -193,4 +123,4 @@ float vBat = vRaw * ((10.0 + 4.7) / 4.7);
 
 ---
 
-*Assembly, wiring diagrams, and BOM details will be expanded in future commits. See repo for STL, code, and simulation downloads.*
+*Assembly guide, wiring diagrams, and STL download links will be included in the upcoming PDF. Stay tuned!*
