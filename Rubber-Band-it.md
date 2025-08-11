@@ -28,14 +28,24 @@ Brief overview of project goals, what the tank does, and why it was built. (To b
   - The rear barrel wheel is redesigned with a keyed servo attachment for synchronized rotation.
   - The trigger is integrated as part of a single rear/front body piece (improving rigidity over the original 3-piece trigger design).
   - The bottom slot is used to mount the gun to the turret using two M4 screws for secure attachment.
-  - For proper attribution, the original design by [Thingiverse user "Cort"](https://www.thingiverse.com/cort) is referenced; see [Thingiverse: Rubber Band Gatling Gun Thing 647475](https://www.thingiverse.com/thing:647475/files).
+  - For proper attribution, the original design by [Thingiverse user "Cort"](https://www.thingiverse.com/cort) is referenced; see link.
+  
 
 - **Track Drive:**  
-  Dual N20 motors (ESC-controlled), 4cm sprocket drive wheels for pivot and turn capability.
+  Dual N20 motors (ESC-controlled), 4 cm sprocket drive wheels for pivot and turn capability.  
+  **Track system (Thingiverse-based):** Original concept from [Thing 4009469](https://www.thingiverse.com/thing:4009469/files). For this build, regular **staples** are used in place of the recommended 1 mm wire pins. This provides very good flexibility at the hinge/pivot points and enough compliance for local compression/stretch along the track path. **Durability is still being evaluated** — real-world testing so far has been limited to a STEM class project.  
+  **Sprockets (modified):** Derived from [Thing 4140332](https://www.thingiverse.com/thing:4140332/files) and customized for this platform:
+  - Covered the spoke holes and **extruded the center hub** for cleaner looks and easier FDM printing.
+  - Two variants:
+    - **Drive sprocket:** keyed/tight-fit for **N20 motor shafts** to ensure positive torque transfer.
+    - **Idler sprocket:** simple **through-hole** for a printed shaft/bushing to free-spin smoothly.
+  - Tooth profile preserved for reliable meshing with the linked track design.
+  - For proper attribution, the original LEGO tread design by [Thingiverse user "Polar_19"](https://www.thingiverse.com/Polar_19) is referenced; see link.
+  - For proper attribution, the original LEGO sprocket design by [Thingiverse user "neumaker_42"](https://www.thingiverse.com/neumaker_42) is referenced; see link.
 
 - **FEA & Validation:**  
   Static structural simulation (ANSYS 2025R2) on critical parts.  
-  Max deformation ≤ 0.2mm; von-Mises stress well below PLA yield.  
+  Max deformation ≤ 0.2 mm; von-Mises stress well below PLA yield.  
   [Downloadable simulation files and viewers available.]
 
 - **Manufacturing & Design Choices:**  
@@ -56,7 +66,7 @@ Brief overview of project goals, what the tank does, and why it was built. (To b
   - Arduino Nano control board  
   - L298N ZX-040 (dual ESC) motor driver  
   - 6-channel Spektrum RC receiver for wireless control  
-  - 7.4V LiPo battery + buck converter for 5V rails  
+  - 7.4 V LiPo battery + buck converter for 5 V rails  
   - OLED display for live telemetry and HUD
 
 - **Function Overview:**  
@@ -93,46 +103,4 @@ Brief overview of project goals, what the tank does, and why it was built. (To b
 
 - Tolerance problems with printed parts (fit/finish)
 - Code bugs (PWM decoding, servo jitter, signal loss)
-- L298N driver issues (brownouts, current limits)
-- Iterative fixes and lessons learned
-
----
-
-## 6. Wanna Build It Yourself?
-
-**Coming Soon:**  
-A full step-by-step build PDF (including STL files, assembly, and wiring) will be provided here for easy replication.
-
----
-
-## 7. Project Timeline
-
-- 2025-08-07: FEA docs, simulation GIFs, portfolio reorg
-- 2025-08-01: Static/deformation sims, safety factor ≥ 3
-- 2025-07-25: v1.5 firmware, HUD, crosshair overlays, voltage readout
-- 2025-07-01: OLED animation, Mario startup, vector math HUD
-- 2025-06-10: Dual ESCs, improved throttle, failsafes
-- 2025-05-19: Initial Arduino/L298N/servo logic
-
----
-
-## 8. Next Steps & Future Improvements
-
-- Expand assembly instructions and troubleshooting guide
-- Add full build video and wiring diagrams
-- Firmware improvements (safety features, new HUD elements)
-- Hardware tweaks for reliability and printability
-
----
-
-## References
-
-- [u8glib OLED Library](https://github.com/olikraus/u8glib)
-- [PinChangeInterrupt Playground](https://playground.arduino.cc/Main/PinChangeInterrupt/)
-- [Servo.h Docs](https://www.arduino.cc/en/Reference/Servo)
-- [Mario Theme Arduino](https://www.instructables.com/Arduino-Mario-Bros-Theme-Song/)
-- [Thingiverse: Rubber Band Gatling Gun by Cort, Thing 647475](https://www.thingiverse.com/thing:647475/)
-
----
-
-*Assembly guide, wiring diagrams, and STL download links will be included in the upcoming PDF. Stay tuned!*
+- L298N driver issues (brow
