@@ -28,7 +28,7 @@ Brief overview of project goals, what the tank does, and why it was built. (To b
   - The rear barrel wheel is redesigned with a keyed servo attachment for synchronized rotation.
   - The trigger is integrated as part of a single rear/front body piece (improving rigidity over the original 3-piece trigger design).
   - The bottom slot is used to mount the gun to the turret using two M4 screws for secure attachment.
-  - For proper attribution, the original design by [Thingiverse user "paskal"](https://www.thingiverse.com/paskal/about) is referenced; see [Thingiverse: Rubber Band Gatling Gun Thing 647475](https://www.thingiverse.com/thing:647475/files).
+  - For proper attribution, the original design by [Thingiverse user "Cort"](https://www.thingiverse.com/cort) is referenced; see [Thingiverse: Rubber Band Gatling Gun Thing 647475](https://www.thingiverse.com/thing:647475/files).
 
 - **Track Drive:**  
   Dual N20 motors (ESC-controlled), 4cm sprocket drive wheels for pivot and turn capability.
