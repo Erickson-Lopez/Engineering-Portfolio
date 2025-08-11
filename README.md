@@ -14,7 +14,7 @@ Helping people in everyday life is what gets me excited to build stuff. I want w
 
 Since I was a kid, I’ve been tearing apart RC cars and planes just to see how they tick, then putting them back together (sometimes with “improvements”). That curiosity is still what drives me as an engineering student. When I run into a problem, I like to get to the root cause first—fix the big thing, then handle the smaller stuff step by step. Breaking projects into chunks just makes everything more manageable.
 
-I pick up a lot from other people too. If I see a cool trick or hack online, I’ll figure out the core idea and try it myself (like using paperclips for tank tread hinges!). I’m always looking for practical ideas to add to my own toolkit, but I still think for myself and try to find my own twist on things.
+I pick up a lot from other people too. If I see a cool trick or hack online, I’ll figure out the core idea and try it myself (like using staples for tread hinges!). I’m always looking for practical ideas to add to my own toolkit, but I still think for myself and try to find my own twist on things.
 
 At the end of the day, I want to make stuff I’d actually use or buy myself. I’ve seen a ton of products that miss the mark for real users, and I never want to be that kind of engineer. For me, success is about building things that solve real problems, and being as hands-on as possible—because I learn best by doing, not just sitting at a desk.
 
