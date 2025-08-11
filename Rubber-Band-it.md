@@ -19,6 +19,17 @@ Brief overview of project goals, what the tank does, and why it was built. (To b
 - **Turret & Launcher:**  
   Pan/tilt with standard and continuous servos, sprocket-driven launcher for rapid fire.
 
+- **Launcher (Gatling Gun Redesign):**  
+  The turret's rubber band Gatling gun is based on [Thingiverse Thing 647475](https://www.thingiverse.com/thing:647475), but with significant modifications:
+  - Reduced to half size for compactness and integration.
+  - Uses a continuous rotation servo (instead of the original 90-degree gears and crank).
+  - The 6 barrels rotate; each time a barrel passes the trigger, a ratchet mechanism advances the sprocket by a set degree and releases one rubber band.
+  - Each barrel can be loaded with up to 3 rubber bands (18 shots total).
+  - The rear barrel wheel is redesigned with a keyed servo attachment for synchronized rotation.
+  - The trigger is integrated as part of a single rear/front body piece (improving rigidity over the original 3-piece trigger design).
+  - The bottom slot is used to mount the gun to the turret using two M4 screws for secure attachment.
+  - For proper attribution, the original design by [Thingiverse user "paskal"](https://www.thingiverse.com/paskal/about) is referenced; see [Thingiverse: Rubber Band Gatling Gun Thing 647475](https://www.thingiverse.com/thing:647475/files).
+
 - **Track Drive:**  
   Dual N20 motors (ESC-controlled), 4cm sprocket drive wheels for pivot and turn capability.
 
@@ -120,6 +131,7 @@ A full step-by-step build PDF (including STL files, assembly, and wiring) will b
 - [PinChangeInterrupt Playground](https://playground.arduino.cc/Main/PinChangeInterrupt/)
 - [Servo.h Docs](https://www.arduino.cc/en/Reference/Servo)
 - [Mario Theme Arduino](https://www.instructables.com/Arduino-Mario-Bros-Theme-Song/)
+- [Thingiverse: Rubber Band Gatling Gun by paskal, Thing 647475](https://www.thingiverse.com/thing:647475/)
 
 ---
 
