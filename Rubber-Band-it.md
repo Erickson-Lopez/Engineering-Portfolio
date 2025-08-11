@@ -14,7 +14,7 @@ Brief overview of project goals, what the tank does, and why it was built. (To b
 
 - **Chassis & Frame:**  
   3D-printed PLA/PETG chassis, FEA-validated for strength.  
-  All major load-bearing mounts analyzed in ANSYS (factor of safety ≥ 3).
+  All major load-bearing mounts analyzed in ANSYS.
 
 - **Turret & Launcher:**  
   Pan/tilt with standard and continuous servos, sprocket-driven launcher for rapid fire.
