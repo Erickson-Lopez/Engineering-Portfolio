@@ -131,7 +131,7 @@ A full step-by-step build PDF (including STL files, assembly, and wiring) will b
 - [PinChangeInterrupt Playground](https://playground.arduino.cc/Main/PinChangeInterrupt/)
 - [Servo.h Docs](https://www.arduino.cc/en/Reference/Servo)
 - [Mario Theme Arduino](https://www.instructables.com/Arduino-Mario-Bros-Theme-Song/)
-- [Thingiverse: Rubber Band Gatling Gun by paskal, Thing 647475](https://www.thingiverse.com/thing:647475/)
+- [Thingiverse: Rubber Band Gatling Gun by Cort, Thing 647475](https://www.thingiverse.com/thing:647475/)
 
 ---
 
