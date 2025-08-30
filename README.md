@@ -30,7 +30,7 @@ At the end of the day, I want to make stuff I’d actually use or buy myself. I�
 
 ---
 
-### 110cc ATV Frame Rework _[IN PROGRESS]_
+### 110cc ATV Frame Rework >[IN PROGRESS]
 
 <img src="https://raw.githubusercontent.com/Erickson-Lopez/Engineering-Portfolio/5ff9ce760a15c3b2cbd4ceb4896162287b793aea/assets/README/IMG_2159.jpeg" alt="Project Image" width="400"/>  
 After a go-kart project fell through, I was left with one silver lining: a perfectly functional Chinese-made 125cc electric start 4-stroke engine, complete with a 3-speed semi-automatic transmission, neutral, and reverse. A mouthful, I know. Eventually, I stumbled across a $40 110cc-sized ATV frame on Facebook Marketplace. It turned out to be the best $40 I’ve spent to date. Of course, $40 doesn’t get you showroom quality. The chassis came with issues: flat tires, worn steering knuckles, and stress fractures at the engine mount closest to the sprocket (ikely from chain torque fatigue.) Some budget-friendly field repairs (washer-weld reinforcement on knuckles and better bracing on motor mounts) brought it back to life. Compatibility wise, most horizontal Chinese ATV engines between 50cc and 125cc share the same bolt pattern. That meant I could drop the engine straight in with zero frame modifications. Thanks to the higher displacement, I got more torque than I probably needed (but hey I'm not complaining.) To this day, the thing still runs. It’s not flawless (occasional hiccups with the carb or wiring keep me humble) but it’s a great little platform for experimenting. Eventually, I’d love to incorporate some Arduino-based controls or telemetry mods to bring this janky mini-beast into the modern era.
