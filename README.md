@@ -26,7 +26,7 @@ At the end of the day, I want to make stuff I’d actually use or buy myself. I�
 
 ## 🚧 Projects In Development
 
-> _Live updates on what I’m building, tinkering with, or fixing. Each project has its own update feed—scroll to see the progress! _
+> Live updates on what I’m building, tinkering with, or fixing. Each project has its own update feed—scroll to see the progress! 
 
 ---
 
