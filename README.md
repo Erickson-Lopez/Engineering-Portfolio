@@ -30,12 +30,15 @@ At the end of the day, I want to make stuff I’d actually use or buy myself. I�
 
 ---
 
-### 110cc ATV Custom Bodywork [IN PROGRESS]
+### 110cc ATV Frame Rework [IN PROGRESS]
 
-_Custom mounted plastic bodywork from a Jeep Power Wheels body. Minor project in the works for better aesthetics. Lights and wiring to come._
+_After a failed go kart project I found myself stuck with a perfectly good atv engine; a Chinese made electric start 125cc 4 stroke with a 3 speed, neutral and reverse semi auto transmission. A mouthfull I know. In due time I stumbled across a $40 110cc size ATV frame on Facebook marketplace that would end up being the best $40 I've spent to date. Unfortunately $40 doesn't get you a new chassis, so mine came with issues and flat tires. The frame had sustained wear around the engine mount closest to the motor sprocket and started to detach at the welds. Likely due to the rotational torque from the chain. The steering kuckles were very worn, to fix this washers were welded on as reinforcement. As far as compatibility most of these horizontal engines, ranging from 50cc-125cc, are the same bolt patterns since the only changes in design are: the transmission internals and the displacement of the head. This meant I could bolt up the engine onto the frame with zero modifications, and have more power than I should need from a slightly higher displacement engine. To this day it runs well with the occassional hiccup with carb and wiring issues. Nonetheless, I hope to do some cool (possibly arduino based) modifications with this... less than adequate, mini-vehicle._
 
 #### Updates Feed:
-- **2025-08-06** — Initial CAD model complete, first 3D print done.  
+- **2025-03-25** — 110cc ATV frame acquired.
+- **2025-08-19** — Welds fixed alongside steering knuckle reinforcement.   
+- **2025-08-20** — Foot pegs lowered and welded with splints for reinforcement, can adequately say the frame will come apart before my less than ideal welds fall apart. This modification allows larger riders to ride more comfortably, as well as easier gear shifting. Cons: old 110cc tao tao plastic bodies wil no longer fit on it, fine considering I have... other plans for the frame.
+- **2025-08-29** — Base bodywork materials acquired, pink Jeep anyone? Heck yeah! 🗣️.  
 ---
 
 _More projects here as we start them!_
