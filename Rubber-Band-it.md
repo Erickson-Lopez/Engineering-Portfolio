@@ -66,7 +66,7 @@ Brief overview of project goals, what the tank does, and why it was built. (To b
 
 - **Core Components:**  
   - Arduino Uno control board  
-  - L298N ZX-040 (dual ESC) motor driver  
+  - Brushed (dual ESC) motor driver  
   - 6-channel Spektrum RC receiver for wireless control  
   - 11.1 V LiPo battery + ESC BEC converter for 5 V rails  
   - OLED display for live telemetry and HUD
