@@ -49,7 +49,6 @@ Brief overview of project goals, what the tank does, and why it was built. (To b
   Static structural simulation (ANSYS 2025R2) on critical parts.
   
   Max deformation ≤ 0.2 mm; von-Mises stress well below PLA yield.  
-  [Downloadable simulation files and viewers available.]
 
 - **Manufacturing & Design Choices:**  
   Designed around FDM 3D printing for easy replication and modification. Fasteners chosen for plastic (M3 screws, heat inserts).  
