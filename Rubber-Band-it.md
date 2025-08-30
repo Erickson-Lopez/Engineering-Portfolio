@@ -51,7 +51,7 @@ Brief overview of project goals, what the tank does, and why it was built. (To b
   Max deformation ≤ 0.2 mm; von-Mises stress well below PLA yield.  
 
 - **Manufacturing & Design Choices:**  
-  Designed around FDM 3D printing for easy replication and modification. Fasteners chosen for plastic (M3 screws, heat inserts).  
+  Designed around FDM 3D printing for easy replication and modification. Fasteners chosen for plastic (M3 screws, no heat inserts).  
   Design driven by balance between ease of printing, strength, and modularity.
 
 - **Speed Calculation (at 1000 RPM):**  
