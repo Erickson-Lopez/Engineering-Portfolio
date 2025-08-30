@@ -33,7 +33,7 @@ Brief overview of project goals, what the tank does, and why it was built. (To b
 
 - **Track Drive:**  
   Dual N20 motors (ESC-controlled), 4 cm sprocket drive wheels for pivot and turn capability.  
-  **Track system (Thingiverse-based):** Original concept from [Thing 4009469](https://www.thingiverse.com/thing:4009469/files). For this build, regular **staples** are used in place of the recommended 1 mm wire pins (easily sourced.) This provides very good flexibility at the hinge/pivot points and enough compliance for local compression/stretch along the track path. **Durability is still being evaluated** — real-world testing so far has been limited to a STEM class project.  
+  **Track system (Thingiverse-based):** Original concept from [Thing 4009469](https://www.thingiverse.com/thing:4009469/files). For this build, regular **staples** are used in place of the recommended 1 mm wire pins (easily sourced.) This provides very good flexibility at the hinge/pivot points and enough compliance for local compression/stretch along the track path. **Durability is still being evaluated** (real-world testing so far has been limited to a STEM class project.)  
   **Sprockets (modified):** Derived from [Thing 4140332](https://www.thingiverse.com/thing:4140332/files) and customized for this platform:
   - Covered the spoke holes and **extruded the center hub** for cleaner looks and easier FDM printing.
   - Two variants:
