@@ -20,41 +20,25 @@ At the end of the day, I want to make stuff I’d actually use or buy myself. I�
 
 ---
 
-**If you want to see what I’m working on, scroll down to my projects!**
+**If you want to see what I’m working on, scroll down to my projects! (NOTE - If you are seeing this, my projects pages are not up to date and are a work in progress, info may not be completely coherent and project images are yet to come. Thank you!)**
 
 ---
 
 ## 🚧 Projects In Development
 
-> _Live updates on what I’m building, tinkering with, or fixing. Each project has its own update feed—scroll to see the progress! (NOTE - Everything from here is an ongoing work in progress)_
+> _Live updates on what I’m building, tinkering with, or fixing. Each project has its own update feed—scroll to see the progress! _
 
 ---
 
-### Tank Tread Hinge System [IN PROGRESS]
+### 110cc ATV Custom Bodywork [IN PROGRESS]
 
-_Experimental tank tread using paperclip hinges for flexibility and low-cost prototyping._
+_Custom mounted plastic bodywork from a Jeep Power Wheels body. Minor project in the works for better aesthetics. Lights and wiring to come._
 
 #### Updates Feed:
 - **2025-08-06** — Initial CAD model complete, first 3D print done.  
-  _[Add photo here]_  
-- **2025-08-07** — Fixed hinge binding by increasing clearance.  
-  _[Add before/after diagram or quick sketch]_  
-- **2025-08-10** — Mounted on RC tank chassis, improved turning.  
-  _[Add video, code, or notes]_  
-- **2025-08-13** — Prepping for durability testing.
-
 ---
 
-### Modular RC Car Chassis [IN PROGRESS]
-
-_Making an RC car chassis that’s super easy to swap batteries and parts._
-
-#### Updates Feed:
-- **2025-08-06** — Designed quick-swap battery compartment.
-
----
-
-_Add more projects here as you start them!_
+_More projects here as we start them!_
 
 ---
 
