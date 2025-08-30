@@ -37,7 +37,7 @@ _After a failed go kart project I found myself stuck with a perfectly good atv e
 #### Updates Feed:
 - **2025-03-25** — 110cc ATV frame acquired.
 - **2025-08-19** — Welds fixed alongside steering knuckle reinforcement.   
-- **2025-08-20** — Foot pegs lowered and welded with splints for reinforcement, can adequately say the frame will come apart before my less than ideal welds fall apart. This modification allows larger riders to ride more comfortably, as well as easier gear shifting. Cons: old 110cc tao tao plastic bodies wil no longer fit on it, fine considering I have... other plans for the frame.
+- **2025-08-20** — Foot pegs lowered and welded with splints for reinforcement, can adequately say the frame will come apart before my less than ideal welds fail. This modification allows larger riders to ride more comfortably, as well as easier gear shifting. Cons: old 110cc tao tao plastic bodies wil no longer fit on it, fine considering I have... other plans for the frame.
 - **2025-08-29** — Base bodywork materials acquired, pink Jeep anyone? Heck yeah! 🗣️.  
 ---
 
