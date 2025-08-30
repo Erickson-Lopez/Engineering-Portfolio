@@ -12,7 +12,7 @@ I’m a big believer that the best engineering is simple. If you can make someth
 
 Helping people in everyday life is what gets me excited to build stuff. I want what I make to be genuinely useful. I’m always curious about how things work. I love experimenting with new ideas, even if they’re a little out there. Whether I’m designing in CAD, working on small engines/vehicles, or messing around with my 3D printer, I just love creating tangible things.
 
-Since I was a kid, I’ve been tearing apart RC cars and planes just to see how they tick, then putting them back together (sometimes with “improvements”). That curiosity is still what drives me as an engineering student. When I run into a problem, I like to get to the root cause first—fix the big thing, then handle the smaller stuff step by step. Breaking projects into chunks just makes everything more manageable.
+Since I was a kid, I’ve been tearing apart RC cars and planes just to see how they tick, then putting them back together (sometimes with “improvements”). That curiosity is still what drives me as an engineering student. When I run into a problem, I like to get to the root cause first fix the big thing, then handle the smaller stuff step by step. Breaking projects into chunks just makes everything more manageable.
 
 I pick up a lot from other people too. If I see a cool trick or hack online, I’ll figure out the core idea and try it myself. I’m always looking for practical ideas to add to my own toolkit, but I still think for myself and try to find my own twist on things (like using staples for tread hinges!)
 
