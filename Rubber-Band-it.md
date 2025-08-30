@@ -43,9 +43,10 @@ Brief overview of project goals, what the tank does, and why it was built. (To b
   - For proper attribution, the original LEGO tread design by [Thingiverse user "Polar_19"](https://www.thingiverse.com/Polar_19) is referenced; see link.
   - For proper attribution, the original LEGO sprocket design by [Thingiverse user "neumaker_42"](https://www.thingiverse.com/neumaker_42) is referenced; see link.
 
-- **FEA & Validation:**  
-  Static structural simulation (ANSYS 2025R2) on critical parts.
+- **FEA & Validation:**
+
   ![Tank Test](https://raw.githubusercontent.com/Erickson-Lopez/Engineering-Portfolio/74a3ea7ed9607d8e97fb11ad39e1f762bfb68a6e/assets/RubberBand-it/StaticStructuralTankTest.gif)
+  Static structural simulation (ANSYS 2025R2) on critical parts.
   
   Max deformation ≤ 0.2 mm; von-Mises stress well below PLA yield.  
   [Downloadable simulation files and viewers available.]
