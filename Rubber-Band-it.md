@@ -85,8 +85,7 @@ Brief overview of project goals, what the tank does, and why it was built. (To b
 ## 4. Firmware & Code Structure
 
 - **Raw Code:**
-  <details>
-
+  
 ```cpp
 // Alpha test V1.5
 // Credit to:
@@ -311,8 +310,7 @@ void loop(){
 
   delay(20);
 }
-```
-</details> 
+``` 
 
 - **Main Functions:**  
   - Interrupt-based RC signal reading  
