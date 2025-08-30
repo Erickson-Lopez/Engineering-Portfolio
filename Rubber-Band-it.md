@@ -45,7 +45,7 @@ Brief overview of project goals, what the tank does, and why it was built. (To b
 
 - **FEA & Validation:**  
   Static structural simulation (ANSYS 2025R2) on critical parts.
-  ![Tank Test](https://raw.githubusercontent.com/ericksonlopez/RubberBand-it/main/assets/RubberBand-it/StaticStructuralTankTest.gif)
+  ![Tank Test](https://raw.githubusercontent.com/Erickson-Lopez/Engineering-Portfolio/74a3ea7ed9607d8e97fb11ad39e1f762bfb68a6e/assets/RubberBand-it/StaticStructuralTankTest.gif)
   
   Max deformation ≤ 0.2 mm; von-Mises stress well below PLA yield.  
   [Downloadable simulation files and viewers available.]
