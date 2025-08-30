@@ -32,8 +32,7 @@ At the end of the day, I want to make stuff I’d actually use or buy myself. I�
 
 ### 110cc ATV Frame Rework [IN PROGRESS]
 
-<img src="https://raw.githubusercontent.com/Erickson-Lopez/Engineering-Portfolio/5ff9ce760a15c3b2cbd4ceb4896162287b793aea/assets/README/IMG_2159.jpeg" alt="Project Image" width="400"/>
-
+<img src="https://raw.githubusercontent.com/Erickson-Lopez/Engineering-Portfolio/5ff9ce760a15c3b2cbd4ceb4896162287b793aea/assets/README/IMG_2159.jpeg" alt="Project Image" width="400"/>  
 After a failed go kart project I found myself stuck with a perfectly good atv engine; a Chinese made electric start 125cc 4 stroke with a 3 speed, neutral and reverse semi auto transmission. A mouthfull I know. In due time I stumbled across a $40 110cc size ATV frame on Facebook marketplace that would end up being the best $40 I've spent to date. Unfortunately $40 doesn't get you a new chassis, so mine came with issues and flat tires. The frame had sustained wear around the engine mount closest to the motor sprocket and started to detach at the welds. Likely due to the rotational torque from the chain. The steering kuckles were very worn, to fix this washers were welded on as reinforcement. As far as compatibility most of these horizontal engines, ranging from 50cc-125cc, are the same bolt patterns since the only changes in design are: the transmission internals and the displacement of the head. This meant I could bolt up the engine onto the frame with zero modifications, and have more power than I should need from a slightly higher displacement engine. To this day it runs well with the occassional hiccup with carb and wiring issues. Nonetheless, I hope to do some cool (possibly arduino based) modifications with this... less than adequate, mini-vehicle.
 
 #### Updates Feed:
@@ -54,7 +53,8 @@ _More projects here as we start them!_
 ---
 ### 🛡️ Rubber Band-it: Arduino Dual-ESC Turret Tank
 
-_A custom RC tank platform for learning and demonstrating embedded systems, real-time signal processing, and applied engineering._
+<img src="https://raw.githubusercontent.com/Erickson-Lopez/Engineering-Portfolio/38cbe50d84052176ea0c92ee41603f07c50be4f6/assets/RubberBand-it/IMG_2417.png" alt="RubberBand Project Image" width="800"/>  
+A custom RC tank platform for learning and demonstrating embedded systems, real-time signal processing, and applied engineering.
 
 [Read full project details & engineering logs →](./Rubber-Band-it.md)
 ---
