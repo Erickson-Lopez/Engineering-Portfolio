@@ -86,7 +86,6 @@ Brief overview of project goals, what the tank does, and why it was built. (To b
 
 - **Raw Code:**
   <details>
-<summary><strong>▶️ Show Arduino Code (Alpha test V1.5)</strong></summary>
 
 ```cpp
 // Alpha test V1.5
